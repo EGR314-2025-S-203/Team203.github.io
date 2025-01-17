@@ -1,6 +1,6 @@
-Welcome
+## Team Organization, Charter, and Repository
+
 1. Home Page
-## Home Page
 
 1. Project name: Engineer Project
 2. Team number: 203
@@ -10,7 +10,7 @@ Welcome
 6. University, class, professor: ASU EGR 314 Aukes
 
 
-## Team Organization:
+2. Team Organization:
 
 Charter Statement
 
@@ -36,7 +36,7 @@ As a team, we aligned on the importance of creating a product that serves a clea
 
 
 
-## Apendix
+3. Apendix
 
 Goals:
 
