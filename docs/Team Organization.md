@@ -1,7 +1,3 @@
----
-title: Team Organization
----
-
 ## Team Organization:
 
 Charter Statement:
