@@ -25,27 +25,3 @@ Our mission is to design an innovative and reliable device that validates a scie
 Supporting Context:
 
 As a team, we aligned on the importance of creating a product that serves a clear and impactful purpose. Our discussions emphasized leveraging each member’s strengths to ensure the product’s reliability and usability. By focusing on accessibility and precision, we aim to produce a tool that not only meets the academic expectations of this course but also resonates with real-world scientific and engineering standards.
-
-
-
-## Apendix
-
-Goals:
-
-1. Develop a functional device that proves a scientific theory.
-
-2. Create a product that exemplifies engineering expertise for future career opportunities.
-
-3. Ensure the design is accessible, reliable, and aligns with professional standards.
-
-4. Enhance teamwork and professional connections through collaborative effort.
-
-5. Build a portfolio-worthy project that integrates technical and creative problem-solving.
-
-Steps Taken:
-
-1. Conducted brainstorming sessions to identify shared goals and align personal objectives.
-
-2. Focused discussions on metrics of success beyond academic grading.
-
-3. Established a charter and mission statement that reflect our collective vision and the project’s purpose.
