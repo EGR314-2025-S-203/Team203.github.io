@@ -1,18 +1,14 @@
----
+
 title: Welcome
-tags:
-- tag1
-- tag2
----
 
 ## Home Page
 
-Project name
-team number
-team members (optional but recommended)
-preparation date
-semester and year
-university, class, professor
+1. Project name: Engineer Project
+2. team number: 203
+3. team members: Brendan Keeter, Carter Oneill, Sivanee Naghichetty Prem Kumar, Zack Gald
+4. preparation date: 1/17/2025
+5. semester and year: Spring 2025
+6. university, class, professor: ASU EGR 314 Aukes
 
 
 ## Team Organization:
