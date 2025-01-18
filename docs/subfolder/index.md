@@ -1,5 +1,5 @@
 ---
-title: This is the index to a subfolder
+EGR 314: Team 203-Engineering Project
 ---
 
-Things to discuss
+Members: 
