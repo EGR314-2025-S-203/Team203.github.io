@@ -10,6 +10,9 @@ Our intended user for this project is K-12 students. We want to help them to be 
 
 Team brainstorm phases:
 
+/Screenshot(116).png
+
+/Screenshot(115).png
 
 Design concept:
 
