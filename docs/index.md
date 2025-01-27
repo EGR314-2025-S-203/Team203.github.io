@@ -16,6 +16,14 @@ Step 1: Background reading
 
 Step 2: Learn about science exhibits
 
+What is the goal of your exhibit? 
+
+Our goal is to create Demonstrating a physical action. Where the kids can press a button and change the string wave into a different type of sound wave
+
+Who is your audience? 
+
+The intended user is K-12 students interested in learning about science, technology, engineering, or math. Your goal is to demonstrate
+
 Step 3: Generate Ideas
 
 Step 4: Sort, Rank, and Group
