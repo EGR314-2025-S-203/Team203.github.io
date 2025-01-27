@@ -47,4 +47,6 @@ Step 4: Sort, Rank, and Group
 
 Step 5: Create a concept sketches (or similar) for your exhibit
 
+https://files.oaiusercontent.com/file-QVqfMS6Qiu5RcSQi6fxYuM?se=2025-01-27T22%3A43%3A12Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D00f16a9e-6ec2-4652-9310-ace7391c681b.webp&sig=anP%2BgIcPOUHExc/PegZ7Zaaztk7/6yWIwvlthcRp1fc%3D
+
 Step 6: Presentation
