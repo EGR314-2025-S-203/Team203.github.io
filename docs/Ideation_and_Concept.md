@@ -10,9 +10,9 @@ Our intended user for this project is K-12 students. We want to help them to be 
 
 Team brainstorm phases:
 
-![Ideas before organization]("C:\Users\brend\OneDrive\Pictures\Screenshots\Screenshot (116).png")
+![Ideas before organization](<Screenshot (116).png>)
 
-![Ideas organized into sections]("C:\Users\brend\OneDrive\Pictures\Screenshots\Screenshot (115).png")
+![Organized brainstorming ideas](<Screenshot (115).png>)
 
 Design concept:
 
