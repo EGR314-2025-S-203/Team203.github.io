@@ -8,7 +8,7 @@
 4. Preparation date: 1/17/2025
 5. Semester and year: Spring 2025
 6. University, class, professor: ASU EGR 314 Aukes
-
+mkdir Test
 ## Team Concept Generation and Design Ideation
 
 Step 1: Background reading
