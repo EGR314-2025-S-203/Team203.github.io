@@ -16,4 +16,9 @@ Team brainstorm phases:
 
 Design concept:
 
+Similar project: /https://www.exploratorium.edu/snacks/string-machine
+
+
+
+
 Presentation URL: 
