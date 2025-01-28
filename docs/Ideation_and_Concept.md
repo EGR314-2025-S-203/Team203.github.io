@@ -16,7 +16,7 @@ Team brainstorm phases:
 
 Design concept:
 
-Similar project: [[https://www.exploratorium.edu/snacks/string-machine]]
+[Similar project:](<https://www.exploratorium.edu/snacks/string-machine>)
 
 ![Team protype mock representation](Protype.jpg)
 
