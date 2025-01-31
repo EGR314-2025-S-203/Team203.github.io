@@ -27,10 +27,10 @@ Our goal for demonstration is to simply demonstrate the physical properties of w
 A sample of potential audience members will be interviewed to discern their understanding of sound waves, what draws them to the topic, and what they do not understand. Misconceptions of wave physics can be addressed directly with small placards or notes providing more in-depth information. Furthermore, very obvious labeling will be added to the system to define the use of the pushbuttons, encourage the use of the microphone, define meaning of the string fluctuation, and explain the information presented via web interface. 
 
 Functionality will be divided across the four teammates as follows:
- - Brendan: Actuator Controlled Outputs
+ - Zach: Actuator Controlled Outputs
  - Carter: Sensor Controlled Inputs and Processing
  - Sivanee: Human Machine Interface via buttons and visual output screen
- - Zach: Internet based two-way communication protocol. 
+ - Brendan: Internet based two-way communication protocol. 
 
 
 
