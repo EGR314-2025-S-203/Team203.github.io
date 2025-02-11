@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sequence-diagram-of-team-communication" class="md-skip">
+        <a href="#team-block-diagram" class="md-skip">
           Skip to content
         </a>
       
@@ -476,8 +476,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sequence-diagram-of-team-communication" class="md-nav__link">
-    Sequence Diagram of Team Communication
+  <a href="#team-block-diagram" class="md-nav__link">
+    Team Block diagram
   </a>
   
 </li>
@@ -596,8 +596,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sequence-diagram-of-team-communication" class="md-nav__link">
-    Sequence Diagram of Team Communication
+  <a href="#team-block-diagram" class="md-nav__link">
+    Team Block diagram
   </a>
   
 </li>
@@ -627,16 +627,20 @@
 
   <h1>Team Block</h1>
 
-<h2 id="sequence-diagram-of-team-communication">Sequence Diagram of Team Communication</h2>
+<h2 id="team-block-diagram">Team Block diagram</h2>
+<p>```mermaid</p>
 <p>sequenceDiagram
+    actor W as WebUser
+    actor I as In-Person User
     participant Zack
     participant Brendan
     participant Sivanee
-    participant Carter
-    create actor W as WebUser
-    create actor I as InPerson User
-    Carter-&gt;&gt;Zack: Sends velocity over
-    I-&gt;&gt;Carter: Sets velocity</p>
+    participant Carter</p>
+<pre><code>I-&gt;&gt;Carter: Sets velocity
+Carter-&gt;&gt;Zack: Sends velocity data
+Zack-&gt;&gt;Brendan: Notifies velocity change
+Brendan-&gt;&gt;Sivanee: Updates velocity display
+</code></pre>
 
 
 
