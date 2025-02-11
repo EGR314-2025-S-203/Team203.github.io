@@ -1,6 +1,6 @@
 ## Team Block
 
-![Team Block](https://drive.google.com/uc?export=view&id=1TZvjzAZKhB0Qcy8PTZ2rXXdPLXEYAPgX)
+![Zacks Block](docs/ZGblock.png)
 
 ## Team Mermaid Diagram
 ```mermaid
