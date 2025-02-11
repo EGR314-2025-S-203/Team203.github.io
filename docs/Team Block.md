@@ -1,4 +1,8 @@
-## Team Block diagram
+## Team Block
+
+![Team Block](https://drive.google.com/uc?export=view&id=1TZvjzAZKhB0Qcy8PTZ2rXXdPLXEYAPgX)
+
+## Team Mermaid Diagram
 ```mermaid
 
 sequenceDiagram
@@ -13,3 +17,6 @@ sequenceDiagram
     Carter->>Zack: Sends velocity data
     Zack->>Brendan: Notifies velocity change
     Brendan->>Sivanee: Updates velocity display
+``` 
+
+## Message Types
