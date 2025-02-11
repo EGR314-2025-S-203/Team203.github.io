@@ -1,12 +1,15 @@
-## Sequence Diagram of Team Communication 
+## Team Block diagram
+```mermaid
 
 sequenceDiagram
+    actor W as WebUser
+    actor I as In-Person User
     participant Zack
     participant Brendan
     participant Sivanee
     participant Carter
-    create actor W as WebUser
-    create actor I as InPerson User
-    Carter->>Zack: Sends velocity over
-    I->>Carter: Sets velocity
     
+    I->>Carter: Sets velocity
+    Carter->>Zack: Sends velocity data
+    Zack->>Brendan: Notifies velocity change
+    Brendan->>Sivanee: Updates velocity display
