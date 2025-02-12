@@ -1,6 +1,6 @@
 ## Team Block
 
-![Zacks Block](<ZGblock.png>)
+![Zacks Block](<drawing2.drawio.png>)
 
 ## Team Mermaid Diagram
 ```mermaid
