@@ -537,6 +537,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#message-type-1-set-motor-parameter" class="md-nav__link">
+    Message Type 1: Set Motor Parameter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-type-button-pushed" class="md-nav__link">
+    Message Type: Button Pushed
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -638,6 +652,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#message-type-1-set-motor-parameter" class="md-nav__link">
+    Message Type 1: Set Motor Parameter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-type-button-pushed" class="md-nav__link">
+    Message Type: Button Pushed
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -664,6 +692,19 @@
   <h1>Message Types</h1>
 
 <h2 id="message-types-diagram">Message Types Diagram</h2>
+<p>This document describes the message types and structures used in the communication between boards.</p>
+<h2 id="message-type-1-set-motor-parameter">Message Type 1: Set Motor Parameter</h2>
+<ul>
+<li><strong>Byte 1-2</strong> (uint16_t): <code>0x01</code></li>
+<li><strong>Byte 3</strong> (uint8_t): Motor ID (X)</li>
+<li><strong>Byte 4-5</strong> (uint16_t): Parameter Value (Y)</li>
+</ul>
+<h2 id="message-type-button-pushed">Message Type: Button Pushed</h2>
+<ul>
+<li><strong>Byte 1-2</strong> (uint16_t): <code>0x43</code></li>
+<li><strong>Byte 3</strong> (uint8_t): Button ID</li>
+</ul>
+<p>Each message type is defined by its first two bytes, followed by the necessary data depending on the message type.</p>
 
 
 
