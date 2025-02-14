@@ -611,8 +611,8 @@
 <pre class="mermaid"><code>
 sequenceDiagram
     actor W as WebUser
-    participant Sivanee
     participant Brendan
+    participant Sivanee
     participant Zack
     participant Carter
   actor I as In-Person User
@@ -620,7 +620,8 @@ sequenceDiagram
     I-&gt;&gt;Carter: Sets velocity
     Carter-&gt;&gt;Zack: Sends velocity data
     Zack-&gt;&gt;Brendan: Notifies velocity change
-    Brendan-&gt;&gt;Sivanee: Updates velocity display</code></pre>
+    Brendan-&gt;&gt;Sivanee: Updates velocity display
+Brendan -&gt;&gt; W: Sends Data to Web</code></pre>
 
 
 
