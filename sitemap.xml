@@ -11,6 +11,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://embedded-systems-design.github.io/template_report/Block_Diagram/</loc>
+         <lastmod>2025-02-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://embedded-systems-design.github.io/template_report/Communication_Process/</loc>
+         <lastmod>2025-02-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://embedded-systems-design.github.io/template_report/Ideation_and_Concept/</loc>
          <lastmod>2025-02-14</lastmod>
          <changefreq>daily</changefreq>
@@ -22,11 +32,6 @@
     </url>
     <url>
          <loc>https://embedded-systems-design.github.io/template_report/Team%20Organization/</loc>
-         <lastmod>2025-02-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://embedded-systems-design.github.io/template_report/charts/</loc>
          <lastmod>2025-02-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
