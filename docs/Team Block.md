@@ -7,11 +7,11 @@
 
 sequenceDiagram
     actor W as WebUser
-    actor I as In-Person User
-    participant Zack
-    participant Brendan
     participant Sivanee
+    participant Brendan
+    participant Zack
     participant Carter
+  actor I as In-Person User
     
     I->>Carter: Sets velocity
     Carter->>Zack: Sends velocity data
