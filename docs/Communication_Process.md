@@ -7,8 +7,8 @@ title: Communication Process Diagram
 
 sequenceDiagram
     actor W as WebUser
-    participant Sivanee
     participant Brendan
+    participant Sivanee
     participant Zack
     participant Carter
   actor I as In-Person User
@@ -17,4 +17,5 @@ sequenceDiagram
     Carter->>Zack: Sends velocity data
     Zack->>Brendan: Notifies velocity change
     Brendan->>Sivanee: Updates velocity display
+Brendan ->> W: Sends Data to Web
 ``` 
