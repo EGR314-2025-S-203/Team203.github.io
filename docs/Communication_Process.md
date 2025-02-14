@@ -2,8 +2,7 @@
 title: Communication Process Diagram
 ---
 
-
-sequenceDiagram
+``` sequenceDiagram
     actor W as WebUser
     participant Sivanee
     participant Brendan
