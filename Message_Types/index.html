@@ -538,16 +538,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#message-type-1-set-motor-parameter" class="md-nav__link">
-    Message Type 1: Set Motor Parameter
+  <a href="#uart-messaging-protocol" class="md-nav__link">
+    UART Messaging Protocol
+  </a>
+  
+    <nav class="md-nav" aria-label="UART Messaging Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-message-structure-64-bytes" class="md-nav__link">
+    1. Message Structure (64 Bytes)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-button-pushed" class="md-nav__link">
-    Message Type: Button Pushed
+        
+          <li class="md-nav__item">
+  <a href="#3-error-handling" class="md-nav__link">
+    3. Error Handling
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-resend-request-format" class="md-nav__link">
+    4. Resend Request Format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -653,16 +673,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#message-type-1-set-motor-parameter" class="md-nav__link">
-    Message Type 1: Set Motor Parameter
+  <a href="#uart-messaging-protocol" class="md-nav__link">
+    UART Messaging Protocol
+  </a>
+  
+    <nav class="md-nav" aria-label="UART Messaging Protocol">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-message-structure-64-bytes" class="md-nav__link">
+    1. Message Structure (64 Bytes)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#message-type-button-pushed" class="md-nav__link">
-    Message Type: Button Pushed
+        
+          <li class="md-nav__item">
+  <a href="#3-error-handling" class="md-nav__link">
+    3. Error Handling
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-resend-request-format" class="md-nav__link">
+    4. Resend Request Format
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -689,22 +729,189 @@
   
 
 
-  <h1>Message Types</h1>
-
 <h2 id="message-types-diagram">Message Types Diagram</h2>
 <p>This document describes the message types and structures used in the communication between boards.</p>
-<h2 id="message-type-1-set-motor-parameter">Message Type 1: Set Motor Parameter</h2>
+<h1 id="uart-messaging-protocol">UART Messaging Protocol</h1>
+<p>This document defines the UART messaging protocol for our custom communication system.</p>
+<hr />
+<h2 id="1-message-structure-64-bytes">1. Message Structure (64 Bytes)</h2>
+<p>Each message follows a fixed structure:</p>
+<table>
+<thead>
+<tr>
+<th>Byte(s)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td>Start Indicator (<code>0x02</code>)</td>
+</tr>
+<tr>
+<td><strong>1-2</strong></td>
+<td>Message Type (See Message Types Table)</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Receiver Address (<code>0x00</code> - <code>0x03</code>)</td>
+</tr>
+<tr>
+<td><strong>4-61</strong></td>
+<td>Message Data (Variable length)</td>
+</tr>
+<tr>
+<td><strong>62-63</strong></td>
+<td>Stop Signal (<code>0x03</code>)</td>
+</tr>
+<tr>
+<td>## 2. Message Types</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The system supports different message types categorized into <strong>Send (<code>S</code>)</strong>, <strong>Request (<code>R</code>)</strong>, and <strong>Error (<code>E</code>)</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th><strong>Send (<code>S</code>)</strong></th>
+<th><strong>Request (<code>R</code>)</strong></th>
+<th><strong>Error (<code>E</code>)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OLED display update</strong></td>
+<td><code>0x10 0x00</code></td>
+<td><code>0x10 0x01</code></td>
+<td><code>0x10 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Voice input to microphone</strong></td>
+<td><code>0x20 0x00</code></td>
+<td><code>0x20 0x01</code></td>
+<td><code>0x20 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Button input</strong></td>
+<td><code>0x30 0x00</code></td>
+<td><code>0x30 0x01</code></td>
+<td><code>0x30 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Confirm button press</strong></td>
+<td><code>0x40 0x00</code></td>
+<td><code>0x40 0x01</code></td>
+<td><code>0x40 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Pitch info</strong></td>
+<td><code>0x50 0x00</code></td>
+<td><code>0x50 0x01</code></td>
+<td><code>0x50 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Pitch data in visual form</strong></td>
+<td><code>0x60 0x00</code></td>
+<td><code>0x60 0x01</code></td>
+<td><code>0x60 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Output speaker imitation pitch</strong></td>
+<td><code>0x70 0x00</code></td>
+<td><code>0x70 0x01</code></td>
+<td><code>0x70 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Update pitch display</strong></td>
+<td><code>0x80 0x00</code></td>
+<td><code>0x80 0x01</code></td>
+<td><code>0x80 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Output OLED of data</strong></td>
+<td><code>0x90 0x00</code></td>
+<td><code>0x90 0x01</code></td>
+<td><code>0x90 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Send data to Web</strong></td>
+<td><code>0xA0 0x00</code></td>
+<td><code>0xA0 0x01</code></td>
+<td><code>0xA0 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Print data from microphone</strong></td>
+<td><code>0xB0 0x00</code></td>
+<td><code>0xB0 0x01</code></td>
+<td><code>0xB0 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Print data from OLED</strong></td>
+<td><code>0xC0 0x00</code></td>
+<td><code>0xC0 0x01</code></td>
+<td><code>0xC0 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Print data from Speaker</strong></td>
+<td><code>0xD0 0x00</code></td>
+<td><code>0xD0 0x01</code></td>
+<td><code>0xD0 0x02</code></td>
+</tr>
+<tr>
+<td><strong>Print data from Web Interface</strong></td>
+<td><code>0xE0 0x00</code></td>
+<td><code>0xE0 0x01</code></td>
+<td><code>0xE0 0x02</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-error-handling">3. Error Handling</h2>
+<p>Error handling is integrated into the system using <strong>resend requests</strong> and error messages for each type of function.</p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Parity Error</strong></td>
+<td>Resend Request <code>[0xEE, Sender Address]</code></td>
+</tr>
+<tr>
+<td><strong>Specific Function Failure</strong></td>
+<td>Send corresponding Error message (<code>E</code> type from table)</td>
+</tr>
+<tr>
+<td><strong>Max Retransmit Attempts Reached</strong></td>
+<td>Message is dropped/logged after 3 tries</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-resend-request-format">4. Resend Request Format</h2>
+<p>If a <strong>parity error</strong> occurs, the receiver discards the message and requests a resend using the following format:</p>
+<table>
+<thead>
+<tr>
+<th>Byte 0</th>
+<th>Byte 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0xEE</code></td>
+<td>Sender Address</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><strong>Byte 1-2</strong> (uint16_t): <code>0x01</code></li>
-<li><strong>Byte 3</strong> (uint8_t): Motor ID (X)</li>
-<li><strong>Byte 4-5</strong> (uint16_t): Parameter Value (Y)</li>
+<li>Example: <code>[0xEE, 0x01]</code> → Requests a resend from PCB 1.</li>
 </ul>
-<h2 id="message-type-button-pushed">Message Type: Button Pushed</h2>
-<ul>
-<li><strong>Byte 1-2</strong> (uint16_t): <code>0x43</code></li>
-<li><strong>Byte 3</strong> (uint8_t): Button ID</li>
-</ul>
-<p>Each message type is defined by its first two bytes, followed by the necessary data depending on the message type.</p>
 
 
 
