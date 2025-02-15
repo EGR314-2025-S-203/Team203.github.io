@@ -617,10 +617,14 @@ sequenceDiagram
     participant Carter
   actor I as In-Person User
 
-    I-&gt;&gt;Carter: Sets velocity
-    Carter-&gt;&gt;Zack: Sends velocity data
-    Zack-&gt;&gt;Brendan: Notifies velocity change
-    Brendan-&gt;&gt;Sivanee: Updates velocity display
+    I-&gt;&gt;Carter: Voice input to microphone
+    I-&gt;&gt;Sivanee: Button input
+    Sivanee-&gt;&gt;Carter: Confirm button press
+    Carter-&gt;&gt;Zack: Sends pitch info
+    Zack-&gt;&gt;Brendan: Relays pitch data in visual form
+    Zack-&gt;&gt;I: Output microphone imitation pitch
+    Brendan-&gt;&gt;Sivanee: Updates pitch display
+    Sivanee-&gt;&gt;I: Output OLED of data 
 Brendan -&gt;&gt; W: Sends Data to Web</code></pre>
 
 
