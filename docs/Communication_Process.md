@@ -18,7 +18,7 @@ sequenceDiagram
     Sivanee->>Carter: Confirm button press
     Carter->>Zack: Sends pitch info
     Zack->>Brendan: Relays pitch data in visual form
-    Zack->>I: Output microphone imitation pitch
+    Zack->>I: Output speaker imitation pitch
     Brendan->>Sivanee: Updates pitch display
     Sivanee->>I: Output OLED of data 
 Brendan ->> W: Sends Data to Web
