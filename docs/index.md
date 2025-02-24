@@ -9,3 +9,16 @@
 5. Semester and year: Spring 2025
 6. University, class, professor: ASU EGR 314 Aukes
 
+## Individuals Websites
+
+Zack's 
+https://zackgald.github.io/
+
+Brendan's
+
+
+Carter's
+
+
+Sivanee's
+
