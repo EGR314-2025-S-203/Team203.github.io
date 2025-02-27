@@ -1,6 +1,6 @@
 ## Apendix
 
-Goals:
+### Goals:
 
 1. Develop a functional device that proves a scientific theory.
 
@@ -12,7 +12,7 @@ Goals:
 
 5. Build a portfolio-worthy project that integrates technical and creative problem-solving.
 
-Steps Taken:
+### Steps Taken:
 
 1. Conducted brainstorming sessions to identify shared goals and align personal objectives.
 
