@@ -2,7 +2,8 @@
 
 Charter Statement:
 
->Our team’s charter statement reflects the shared goals and aspirations we developed through collaborative discussions about the purpose and direction of our project. After a focused 10-minute session to define our objectives, we identified key success metrics that go beyond achieving an academic grade. These goals serve as the foundation for our work and ensure alignment with our personal and professional aspirations.
+>Our team’s charter statement reflects the shared goals and aspirations we developed through collaborative discussions about the purpose and direction of our project. 
+After a focused 10-minute session to define our objectives, we identified key success metrics that go beyond achieving an academic grade. These goals serve as the foundation for our work and ensure alignment with our personal and professional aspirations.
 
 Team Charter Statement:
 We commit to designing and delivering a product that not only fulfills the requirements of the course but also exemplifies our collective dedication to innovation, precision, and impactful problem-solving. Our aim is to enhance our engineering expertise, create a portfolio-worthy design, and contribute meaningfully to the field of scientific exploration.
