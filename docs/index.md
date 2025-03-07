@@ -24,8 +24,8 @@ Brendan's
 [Brendans Webpage](<https://brendan-keeter.github.io/>)
 
 Carter's
-
+[Carter's Webpage](<https://cboneil1.github.io/>)
 
 Sivanee's
-[Sivanee's Webpage](https://snaghich.github.io/)
+[Sivanee's Webpage](<https://snaghich.github.io/>)
 
