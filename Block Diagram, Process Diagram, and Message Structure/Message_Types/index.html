@@ -593,13 +593,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#4-resend-request-format" class="md-nav__link">
-    4. Resend Request Format
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -717,13 +710,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#4-resend-request-format" class="md-nav__link">
-    4. Resend Request Format
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -758,7 +744,7 @@
 <p>This document defines the UART messaging protocol for our custom communication system.</p>
 <hr />
 <h2 id="1-message-structure-64-bytes">1. Message Structure (64 Bytes)</h2>
-<p>Each message follows a fixed structure:</p>
+<p>Each message follows a repeated, but variable structure:</p>
 <table>
 <thead>
 <tr>
@@ -902,7 +888,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Parity Error</strong></td>
+<td><strong>Message Receive Error</strong></td>
 <td>Resend Request <code>[0xEE, Sender Address]</code></td>
 </tr>
 <tr>
@@ -916,25 +902,6 @@
 </tbody>
 </table>
 <hr />
-<h2 id="4-resend-request-format">4. Resend Request Format</h2>
-<p>If a <strong>parity error</strong> occurs, the receiver discards the message and requests a resend using the following format:</p>
-<table>
-<thead>
-<tr>
-<th>Byte 0</th>
-<th>Byte 1</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>0xEE</code></td>
-<td>Sender Address</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Example: <code>[0xEE, 0x01]</code> → Requests a resend from PCB 1.</li>
-</ul>
 
 
 
