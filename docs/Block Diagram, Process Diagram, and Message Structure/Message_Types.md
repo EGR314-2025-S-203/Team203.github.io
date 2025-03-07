@@ -10,7 +10,7 @@ This document defines the UART messaging protocol for our custom communication s
 
 ## 1. Message Structure (64 Bytes)
 
-Each message follows a fixed structure:
+Each message follows a repeated, but variable structure:
 
 | Byte(s)  | Description                          |
 |----------|--------------------------------------|
@@ -48,18 +48,8 @@ Error handling is integrated into the system using **resend requests** and error
 
 | Condition                          | Response                                      |
 |------------------------------------|----------------------------------------------|
-| **Parity Error**                   | Resend Request `[0xEE, Sender Address]`     |
+| **Message Receive Error**                   | Resend Request `[0xEE, Sender Address]`     |
 | **Specific Function Failure**       | Send corresponding Error message (`E` type from table) |
 | **Max Retransmit Attempts Reached** | Message is dropped/logged after 3 tries                  |
 
 ---
-
-## 4. Resend Request Format
-
-If a **parity error** occurs, the receiver discards the message and requests a resend using the following format:
-
-| Byte 0   | Byte 1        |
-|----------|--------------|
-| `0xEE`   | Sender Address |
-
-- Example: `[0xEE, 0x01]` → Requests a resend from PCB 1.
