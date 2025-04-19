@@ -671,20 +671,20 @@
 sequenceDiagram
     actor W as WebUser
     participant Brendan
-    participant Sivanee
     participant Zack
     participant Carter
   actor I as In-Person User
 
     I-&gt;&gt;Carter: Voice input to microphone
-    I-&gt;&gt;Sivanee: Button input
-    Sivanee-&gt;&gt;Carter: Confirm button press
     Carter-&gt;&gt;Zack: Sends pitch info
+    Carter-&gt;&gt;Brendan: Sends pitch info
+    Brendan -&gt;&gt; Carter: Sends pitch inquiry
+    Zack-&gt;&gt;Carter: Sends pitch inquiry
     Zack-&gt;&gt;Brendan: Relays pitch data in visual form
-    Zack-&gt;&gt;I: Output speaker imitation pitch
-    Brendan-&gt;&gt;Sivanee: Updates pitch display
-    Sivanee-&gt;&gt;I: Output OLED of data 
-Brendan -&gt;&gt; W: Sends Data to Web</code></pre>
+    Brendan-&gt;&gt;Carter: Pitch Up/Down Correct
+    Zack-&gt;&gt;I: Output motor imitation pitch
+
+Brendan -&gt;&gt; W: Sends target pitch to web</code></pre>
 
 
 
