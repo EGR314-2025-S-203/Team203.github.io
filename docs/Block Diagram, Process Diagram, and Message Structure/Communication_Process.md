@@ -8,18 +8,18 @@ title: Communication Process Diagram
 sequenceDiagram
     actor W as WebUser
     participant Brendan
-    participant Sivanee
     participant Zack
     participant Carter
   actor I as In-Person User
     
     I->>Carter: Voice input to microphone
-    I->>Sivanee: Button input
-    Sivanee->>Carter: Confirm button press
     Carter->>Zack: Sends pitch info
+    Carter->>Brendan: Sends pitch info
+    Brendan ->> Carter: Sends pitch inquiry
+    Zack->>Carter: Sends pitch inquiry
     Zack->>Brendan: Relays pitch data in visual form
-    Zack->>I: Output speaker imitation pitch
-    Brendan->>Sivanee: Updates pitch display
-    Sivanee->>I: Output OLED of data 
-Brendan ->> W: Sends Data to Web
+    Brendan->>Carter: Pitch Up/Down Correct
+    Zack->>I: Output motor imitation pitch
+
+Brendan ->> W: Sends target pitch to web
 ``` 
