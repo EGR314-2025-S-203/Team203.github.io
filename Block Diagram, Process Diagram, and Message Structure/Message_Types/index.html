@@ -608,29 +608,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uart-messaging-protocol" class="md-nav__link">
-    UART Messaging Protocol
+  <a href="#parts" class="md-nav__link">
+    Parts
   </a>
-  
-    <nav class="md-nav" aria-label="UART Messaging Protocol">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-message-structure-64-bytes" class="md-nav__link">
-    1. Message Structure (64 Bytes)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-error-handling" class="md-nav__link">
-    3. Error Handling
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -725,29 +705,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#uart-messaging-protocol" class="md-nav__link">
-    UART Messaging Protocol
+  <a href="#parts" class="md-nav__link">
+    Parts
   </a>
-  
-    <nav class="md-nav" aria-label="UART Messaging Protocol">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-message-structure-64-bytes" class="md-nav__link">
-    1. Message Structure (64 Bytes)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-error-handling" class="md-nav__link">
-    3. Error Handling
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -774,170 +734,201 @@
   
 
 
+  <h1>Message Types</h1>
+
 <h2 id="message-types-diagram">Message Types Diagram</h2>
-<p>This document describes the message types and structures used in the communication between boards.</p>
-<h1 id="uart-messaging-protocol">UART Messaging Protocol</h1>
-<p>This document defines the UART messaging protocol for our custom communication system.</p>
-<hr />
-<h2 id="1-message-structure-64-bytes">1. Message Structure (64 Bytes)</h2>
-<p>Each message follows a repeated, but variable structure:</p>
+<p>This page is to show messages and message types between team members</p>
+<p>Overall Example code: [AZ][SENDERID][RECEIVERID][MESSAGETYPE][VALUE][YB]</p>
+<h2 id="parts">Parts</h2>
+<p>[AZ]: This is the start of the message. This tells the the controller to start reading the message, all messages needs this to be read. NEEDS TO BE IN HEX (0x41)(0x5A)</p>
+<p>[SENDERID]: This helps others see who sent the message. </p>
 <table>
 <thead>
 <tr>
-<th>Byte(s)</th>
-<th>Description</th>
+<th>Teammates</th>
+<th>SENDER ID</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>0</strong></td>
-<td>Start Indicator (<code>0x02</code>)</td>
+<td>Zack</td>
+<td>Z</td>
+<td>Hex (0x5A)</td>
 </tr>
 <tr>
-<td><strong>1-2</strong></td>
-<td>Message Type (See Message Types Table)</td>
+<td>Brendan</td>
+<td>B</td>
+<td>Hex (0x42)</td>
 </tr>
 <tr>
-<td><strong>3</strong></td>
-<td>Receiver Address (<code>0x00</code> - <code>0x03</code>)</td>
-</tr>
-<tr>
-<td><strong>4-61</strong></td>
-<td>Message Data (Variable length)</td>
-</tr>
-<tr>
-<td><strong>62-63</strong></td>
-<td>Stop Signal (<code>0x03</code>)</td>
-</tr>
-<tr>
-<td>## 2. Message Types</td>
-<td></td>
+<td>Carter</td>
+<td>C</td>
+<td>Hex (0x43)</td>
 </tr>
 </tbody>
 </table>
-<p>The system supports different message types categorized into <strong>Send (<code>S</code>)</strong>, <strong>Request (<code>R</code>)</strong>, and <strong>Error (<code>E</code>)</strong>.</p>
+<p>[RECEIVERID]: This helps others see who needs to receive the message. </p>
 <table>
 <thead>
 <tr>
-<th>Function</th>
-<th><strong>Send (<code>S</code>)</strong></th>
-<th><strong>Request (<code>R</code>)</strong></th>
-<th><strong>Error (<code>E</code>)</strong></th>
+<th>Teammates</th>
+<th>RECEIVER ID</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>OLED display update</strong></td>
-<td><code>0x10 0x00</code></td>
-<td><code>0x10 0x01</code></td>
-<td><code>0x10 0x02</code></td>
+<td>Zack</td>
+<td>Z</td>
+<td>Hex (0x5A)</td>
 </tr>
 <tr>
-<td><strong>Voice input to microphone</strong></td>
-<td><code>0x20 0x00</code></td>
-<td><code>0x20 0x01</code></td>
-<td><code>0x20 0x02</code></td>
+<td>Brendan</td>
+<td>B</td>
+<td>Hex (0x42)</td>
 </tr>
 <tr>
-<td><strong>Button input</strong></td>
-<td><code>0x30 0x00</code></td>
-<td><code>0x30 0x01</code></td>
-<td><code>0x30 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Confirm button press</strong></td>
-<td><code>0x40 0x00</code></td>
-<td><code>0x40 0x01</code></td>
-<td><code>0x40 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Pitch info</strong></td>
-<td><code>0x50 0x00</code></td>
-<td><code>0x50 0x01</code></td>
-<td><code>0x50 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Pitch data in visual form</strong></td>
-<td><code>0x60 0x00</code></td>
-<td><code>0x60 0x01</code></td>
-<td><code>0x60 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Output speaker imitation pitch</strong></td>
-<td><code>0x70 0x00</code></td>
-<td><code>0x70 0x01</code></td>
-<td><code>0x70 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Update pitch display</strong></td>
-<td><code>0x80 0x00</code></td>
-<td><code>0x80 0x01</code></td>
-<td><code>0x80 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Output OLED of data</strong></td>
-<td><code>0x90 0x00</code></td>
-<td><code>0x90 0x01</code></td>
-<td><code>0x90 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Send data to Web</strong></td>
-<td><code>0xA0 0x00</code></td>
-<td><code>0xA0 0x01</code></td>
-<td><code>0xA0 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Print data from microphone</strong></td>
-<td><code>0xB0 0x00</code></td>
-<td><code>0xB0 0x01</code></td>
-<td><code>0xB0 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Print data from OLED</strong></td>
-<td><code>0xC0 0x00</code></td>
-<td><code>0xC0 0x01</code></td>
-<td><code>0xC0 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Print data from Speaker</strong></td>
-<td><code>0xD0 0x00</code></td>
-<td><code>0xD0 0x01</code></td>
-<td><code>0xD0 0x02</code></td>
-</tr>
-<tr>
-<td><strong>Print data from Web Interface</strong></td>
-<td><code>0xE0 0x00</code></td>
-<td><code>0xE0 0x01</code></td>
-<td><code>0xE0 0x02</code></td>
+<td>Carter</td>
+<td>C</td>
+<td>Hex (0x43)</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="3-error-handling">3. Error Handling</h2>
-<p>Error handling is integrated into the system using <strong>resend requests</strong> and error messages for each type of function.</p>
+<p>[Message type]: Shows what the value is going to be for. Message type is a hex (1-4)</p>
 <table>
 <thead>
 <tr>
-<th>Condition</th>
-<th>Response</th>
+<th>Message Types</th>
+<th>Values</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Message Receive Error</strong></td>
-<td>Resend Request <code>[0xEE, Sender Address]</code></td>
+<td>Motor Freq</td>
+<td>1</td>
+<td>0x31</td>
 </tr>
 <tr>
-<td><strong>Specific Function Failure</strong></td>
-<td>Send corresponding Error message (<code>E</code> type from table)</td>
+<td>Motor on/off</td>
+<td>3</td>
+<td>0x33</td>
 </tr>
 <tr>
-<td><strong>Max Retransmit Attempts Reached</strong></td>
-<td>Message is dropped/logged after 3 tries</td>
+<td>System off</td>
+<td>4</td>
+<td>0x34</td>
 </tr>
 </tbody>
 </table>
+<p>[Value]: Shows the value for the message type that is sending through (Values are based what the message type is. This messages are in hex (0-256).</p>
+<table>
+<thead>
+<tr>
+<th>Message Types</th>
+<th>Values</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motor Freq</td>
+<td>0-255</td>
+<td>0x30 - 0xFF</td>
+</tr>
+<tr>
+<td>Motor on/off</td>
+<td>0-1</td>
+<td>0x30-0x31</td>
+</tr>
+<tr>
+<td>System off</td>
+<td>0-1</td>
+<td>0x30-0x31</td>
+</tr>
+</tbody>
+</table>
+<p>[YB]: This is the end of the message. This tells the the controller to stop reading the message, all messages needs this to be read. NEEDS TO BE IN HEX (0x59)(0x42)</p>
 <hr />
+<table>
+<thead>
+<tr>
+<th>Message Type</th>
+<th>Message ID  (uint8_t)</th>
+<th>Carter Role: Sensor; ID: C</th>
+<th>Zack Role: Motor; ID: Z</th>
+<th>Brenden Role Web; ID: B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pitch Value</td>
+<td>0x31</td>
+<td>S (reads sound)</td>
+<td>R (Motor reacts)</td>
+<td>R (mqtt topic:/ EGR314/TEAM2/PITCH)</td>
+</tr>
+<tr>
+<td>Motor on or off</td>
+<td>0x33</td>
+<td>-</td>
+<td>R (motor spins)</td>
+<td>S (mqtt topic: /EGR314/TEAM203/MOTORON</td>
+</tr>
+<tr>
+<td>System off</td>
+<td>0x34</td>
+<td>R (turn off sensor)</td>
+<td>R (Turn motor off )</td>
+<td>S mqtt topic: /EGR314/TEAM203/OFF</td>
+</tr>
+<tr>
+<td>Sensor Error</td>
+<td>0x35</td>
+<td>S (message error)</td>
+<td>R (remove motor SPI )</td>
+<td>R mqtt topic: /EGR314/TEAM203/SENSORERROR</td>
+</tr>
+<tr>
+<td>Motor Error</td>
+<td>0x36</td>
+<td>R (disconnect sensor)</td>
+<td>S (message error )</td>
+<td>R mqtt topic: /EGR314/TEAM203/MOTORERROR</td>
+</tr>
+<tr>
+<td>Mqtt Error</td>
+<td>0x37</td>
+<td>-</td>
+<td>-</td>
+<td>R mqtt topic: /EGR314/TEAM203/MQTTERROR</td>
+</tr>
+</tbody>
+</table>
+<p>|---|----|----|-----|---|</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S</td>
+<td>Sends the message</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Receives</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Do nothing, pass through</td>
+</tr>
+</tbody>
+</table>
 
 
 
