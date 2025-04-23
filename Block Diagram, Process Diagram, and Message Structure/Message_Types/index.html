@@ -793,6 +793,11 @@
 <td>C</td>
 <td>Hex (0x43)</td>
 </tr>
+<tr>
+<td>Everyone</td>
+<td>E</td>
+<td>Hex (0x45)</td>
+</tr>
 </tbody>
 </table>
 <p>[Message type]: Shows what the value is going to be for. Message type is a hex (1-4)</p>
@@ -847,8 +852,30 @@
 <td>0-1</td>
 <td>0x30-0x31</td>
 </tr>
+<tr>
+<td>Sensor Error</td>
+<td>0-6</td>
+<td>0x30-0x35</td>
+</tr>
+<tr>
+<td>Motor Error</td>
+<td>0-6</td>
+<td>0x30-0x35</td>
+</tr>
+<tr>
+<td>Mqtt Error</td>
+<td>0-6</td>
+<td>0x30-0x35</td>
+</tr>
 </tbody>
 </table>
+<p>| Error Type | Value|
+| Wrong Start of message | 0x30 |
+| Wrong sender | 0x31 |
+| Wrong reciever | 0x32 |
+| Wrong message type | 0x33 |
+| Wrong message value | 0x34 |
+| Wrong End of message | 0x35 | </p>
 <p>[YB]: This is the end of the message. This tells the the controller to stop reading the message, all messages needs this to be read. NEEDS TO BE IN HEX (0x59)(0x42)</p>
 <hr />
 <table>
