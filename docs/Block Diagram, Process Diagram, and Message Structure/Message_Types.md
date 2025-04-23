@@ -24,6 +24,7 @@ Overall Example code: [AZ][SENDERID][RECEIVERID][MESSAGETYPE][VALUE][YB]
 |Zack | Z | Hex (0x5A)
 |Brendan | B| Hex (0x42)
 |Carter | C| Hex (0x43)
+| Everyone | E | Hex (0x45)
 
 
 [Message type]: Shows what the value is going to be for. Message type is a hex (1-4)
@@ -41,6 +42,17 @@ Overall Example code: [AZ][SENDERID][RECEIVERID][MESSAGETYPE][VALUE][YB]
 | Motor Freq | 0-255 | 0x30 - 0xFF |
 | Motor on/off | 0-1 | 0x30-0x31 |
 | System off | 0-1 | 0x30-0x31 |
+| Sensor Error | 0-6 |  0x30-0x35 |
+| Motor Error | 0-6 |  0x30-0x35 |
+| Mqtt Error | 0-6 |  0x30-0x35 |
+
+| Error Type | Value|
+| Wrong Start of message | 0x30 |
+| Wrong sender | 0x31 |
+| Wrong reciever | 0x32 |
+| Wrong message type | 0x33 |
+| Wrong message value | 0x34 |
+| Wrong End of message | 0x35 | 
 
 [YB]: This is the end of the message. This tells the the controller to stop reading the message, all messages needs this to be read. NEEDS TO BE IN HEX (0x59)(0x42)
 
