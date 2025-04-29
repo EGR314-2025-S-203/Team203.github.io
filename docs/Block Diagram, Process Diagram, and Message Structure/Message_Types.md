@@ -46,7 +46,10 @@ Overall Example code: [AZ][SENDERID][RECEIVERID][MESSAGETYPE][VALUE][YB]
 | Motor Error | 0-6 |  0x30-0x35 |
 | Mqtt Error | 0-6 |  0x30-0x35 |
 
+[Error tpye]
+
 | Error Type | Value|
+|---|---|
 | Wrong Start of message | 0x30 |
 | Wrong sender | 0x31 |
 | Wrong reciever | 0x32 |
@@ -66,8 +69,8 @@ Overall Example code: [AZ][SENDERID][RECEIVERID][MESSAGETYPE][VALUE][YB]
 | Motor Error | 0x36 | R (disconnect sensor) | S (message error ) | R mqtt topic: /EGR314/TEAM203/MOTORERROR |
 | Mqtt Error | 0x37 | - | - | R mqtt topic: /EGR314/TEAM203/MQTTERROR |
 
-|---|----|----|-----|---|
 
+Table
 
 | Item | Meaning |
 |---|---|
