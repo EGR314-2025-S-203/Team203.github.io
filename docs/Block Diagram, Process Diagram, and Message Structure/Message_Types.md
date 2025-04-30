@@ -32,8 +32,9 @@ Overall Example code: [AZ][SENDERID][RECEIVERID][MESSAGETYPE][VALUE][YB]
 | Message Types | Values | Type |
 | ---------|---------|----------|
 | Motor Freq | 1 | 0x31 |
-| Motor on/off | 3 | 0x33 |
+| Motor on/off | 3 | 0x32 |
 | System off | 4 | 0x34 |
+| Error | 6 | 0x33 |
 
 [Value]: Shows the value for the message type that is sending through (Values are based what the message type is. This messages are in hex (0-256).
 
