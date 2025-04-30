@@ -14,6 +14,11 @@ Our intended user for this project is K-12 students. We want to help them to be 
 
 ![Organized brainstorming ideas](<Screenshot (115).png>)
 
+Updated ** Questions that were considered during brainstorm
+1) Need a project that contains 4 different subsystems?
+2) What type of subsystem are we most confortable with?
+3) What can be easy and interactive?
+
 ### Design concept:
 
 [Similar project: String machine](<https://www.exploratorium.edu/snacks/string-machine>)
