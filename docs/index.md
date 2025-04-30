@@ -1,21 +1,20 @@
-## Team Organization, Charter, and Repository
-
 ## Home Page
-Summary: This website is for an ASU EGR314 embedded system project. We are 3rd year engineering students. Building a project to show kids k-8 a single scientific/engineering concept in an interactive, web-abled, physical device. Our project will use a childrens voice pitch and create that wave length with motors and graphing. We used a microphone sensor, stepper motors, and a mqtt communicatoin. The rest of the requirements are listed below: 
 
-https://embedded-systems-design.bitbucket.io/314/project-description/
+This project, developed for the ASU EGR314 Embedded Systems course by third-year engineering students, is an interactive web-enabled educational tool designed to teach K–8 students a scientific concept through physical demonstration. The system captures the pitch of a child’s voice using a microphone sensor, calculates the corresponding sound wavelength, and then recreates that wavelength in real-time using stepper motors to modulate string tension. A visual graph of the wave is also displayed to reinforce the concept. The system integrates key technologies such as MQTT communication, stepper motor control, and sensor data processing, fulfilling all course requirements while delivering a hands-on, engaging learning experience.
 
-
-## Final Photo
-![Screenshot 2025-04-28 185400](https://github.com/user-attachments/assets/5dabd171-4583-4de8-82a8-ba4edcc1a3a8)
-
+[Requirements](https://embedded-systems-design.bitbucket.io/314/project-description/)
 
 1. Project name: String Project
 2. Team number: 203
 3. Team members: Brendan Keeter, Carter Oneill,  Zack Gald
-4. Preparation date: 1/17/2025
+4. Preparation date: 4/30/2025
 5. Semester and year: Spring 2025
 6. University, class, professor: ASU EGR 314 Aukes
+
+
+## Final Photo
+
+![Screenshot 2025-04-28 185400](https://github.com/user-attachments/assets/5dabd171-4583-4de8-82a8-ba4edcc1a3a8)
 
 
 ## Individuals Websites
