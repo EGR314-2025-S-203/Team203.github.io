@@ -7,24 +7,21 @@ title: Communication Process Diagram
 
 sequenceDiagram
     actor W as WebUser
-    participant Brendan as Web Handler
-    participant Zack as Motor Controller
-    participant Carter as Audio Processor
-    actor I as In-Person User
+    participant Brendan
+    participant Zack
+    participant Carter
+  actor I as In-Person User
+    
+    I->>Carter: Voice input to microphone
+    Carter->>Zack: Sends pitch info
+    Carter->>Brendan: Sends pitch info
+    Brendan ->> Carter: Sends pitch inquiry
+    Zack->>Carter: Sends pitch inquiry
+    Zack->>Brendan: Relays pitch data in visual form
+    Brendan->>Carter: Pitch Up/Down Correct
+    Zack->>I: Output motor imitation pitch
 
-    %% In-Person Interaction
-    I->>Carter: Speak into microphone
-    Carter->>Brendan: Send pitch data (frequency in Hz)
-    Carter->>Zack: Send pitch data for motor control
-    Brendan->>Carter: Request pitch update (sync check)
-    Zack->>Carter: Request pitch update (motor sync)
-    Zack->>I: Move motor to simulate pitch wavelength
-
-    %% Web Sync
-    Brendan->>W: Upload pitch data + graph (Hz & waveform)
-    W->>Brendan: Send target pitch or correction ("target = 440 Hz")
-    Brendan->>Carter: Relay web pitch feedback
-    Brendan->>Zack: Notify motor controller of web target
+Brendan ->> W: Sends target pitch to web
 ``` 
 
 This communication process demonstrates real-time bidirectional interaction between the physical String Machine and the web interface. When the in-person user speaks into the microphone, Carter extracts the pitch (in Hz) and sends it to both Brendan and Zack. Zack uses this data to generate a physical response by adjusting the stepper motor to match the pitch’s corresponding wavelength. Brendan formats the detected pitch and waveform data into a visual representation and uploads it to the web for remote viewing. Meanwhile, the WebUser can interact with the system by sending a target pitch or correction (e.g., "target = 440 Hz"), which Brendan routes back to Carter and Zack to adjust processing logic and motor behavior accordingly. This two-way link enables synchronized physical and digital feedback, providing both remote and local users with a seamless educational experience.
