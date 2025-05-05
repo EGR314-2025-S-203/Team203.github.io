@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#parts" class="md-skip">
+        <a href="#message-types-diagram" class="md-skip">
           Skip to content
         </a>
       
@@ -572,15 +572,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parts" class="md-nav__link">
-    Parts
+  <a href="#message-types-diagram" class="md-nav__link">
+    Message Types Diagram
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#parts" class="md-nav__link">
+    Parts
   </a>
   
 </li>
@@ -675,15 +675,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parts" class="md-nav__link">
-    Parts
+  <a href="#message-types-diagram" class="md-nav__link">
+    Message Types Diagram
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    Examples
+  <a href="#parts" class="md-nav__link">
+    Parts
   </a>
   
 </li>
@@ -713,34 +713,35 @@
 
   <h1>API</h1>
 
+<h2 id="message-types-diagram">Message Types Diagram</h2>
 <p>This page is to show messages and message types between team members</p>
 <p>Overall Example code: [AZ][SENDERID][RECEIVERID][MESSAGETYPE][VALUE][YB]</p>
 <h2 id="parts">Parts</h2>
-<p>[AZ]: This is the start of the message. This tells the the controller to start reading the message, all messages needs this to be read. </p>
+<p>[AZ]: This is the start of the message. This tells the the controller to start reading the message, all messages needs this to be read. NEEDS TO BE IN HEX (0x41)(0x5A)</p>
 <p>[SENDERID]: This helps others see who sent the message. </p>
 <table>
 <thead>
 <tr>
 <th>Teammates</th>
 <th>SENDER ID</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Zack</td>
 <td>Z</td>
+<td>Hex (0x5A)</td>
 </tr>
 <tr>
 <td>Brendan</td>
 <td>B</td>
+<td>Hex (0x42)</td>
 </tr>
 <tr>
 <td>Carter</td>
 <td>C</td>
-</tr>
-<tr>
-<td>Sivannee</td>
-<td>S</td>
+<td>Hex (0x43)</td>
 </tr>
 </tbody>
 </table>
@@ -750,83 +751,216 @@
 <tr>
 <th>Teammates</th>
 <th>RECEIVER ID</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Zack</td>
 <td>Z</td>
+<td>Hex (0x5A)</td>
 </tr>
 <tr>
 <td>Brendan</td>
 <td>B</td>
+<td>Hex (0x42)</td>
 </tr>
 <tr>
 <td>Carter</td>
 <td>C</td>
+<td>Hex (0x43)</td>
 </tr>
 <tr>
-<td>Sivannee</td>
-<td>S</td>
+<td>Everyone</td>
+<td>E</td>
+<td>Hex (0x45)</td>
 </tr>
 </tbody>
 </table>
-<p>[Message type]: Shows what the value is going to be for.</p>
+<p>[Message type]: Shows what the value is going to be for. Message type is a hex (1-4)</p>
 <table>
 <thead>
 <tr>
 <th>Message Types</th>
 <th>Values</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Motor Freq</td>
 <td>1</td>
-</tr>
-<tr>
-<td>Wavelength</td>
-<td>2</td>
+<td>0x31</td>
 </tr>
 <tr>
 <td>Motor on/off</td>
 <td>3</td>
+<td>0x33</td>
 </tr>
 <tr>
-<td>NA</td>
+<td>System off</td>
 <td>4</td>
+<td>0x34</td>
 </tr>
 </tbody>
 </table>
-<p>[Value]: Shows the value for the message type that is sending through (Values are based what the message type is</p>
+<p>[Value]: Shows the value for the message type that is sending through (Values are based what the message type is. This messages are in hex (0-256).</p>
 <table>
 <thead>
 <tr>
 <th>Message Types</th>
 <th>Values</th>
+<th>Type</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Motor Freq</td>
-<td>90-800</td>
-</tr>
-<tr>
-<td>Wavelength</td>
-<td>all positive values</td>
+<td>0-255</td>
+<td>0x30 - 0xFF</td>
 </tr>
 <tr>
 <td>Motor on/off</td>
 <td>0-1</td>
+<td>0x30-0x31</td>
 </tr>
 <tr>
-<td>NA</td>
-<td>4</td>
+<td>System off</td>
+<td>0-1</td>
+<td>0x30-0x31</td>
+</tr>
+<tr>
+<td>Sensor Error</td>
+<td>0-6</td>
+<td>0x30-0x35</td>
+</tr>
+<tr>
+<td>Motor Error</td>
+<td>0-6</td>
+<td>0x30-0x35</td>
+</tr>
+<tr>
+<td>Mqtt Error</td>
+<td>0-6</td>
+<td>0x30-0x35</td>
 </tr>
 </tbody>
 </table>
-<h2 id="examples">Examples</h2>
-<p>1) AZCZ1500YB (Carter is sending Zack motor freq of 500)</p>
+<p>[Error tpye]</p>
+<table>
+<thead>
+<tr>
+<th>Error Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wrong Start of message</td>
+<td>0x30</td>
+</tr>
+<tr>
+<td>Wrong sender</td>
+<td>0x31</td>
+</tr>
+<tr>
+<td>Wrong reciever</td>
+<td>0x32</td>
+</tr>
+<tr>
+<td>Wrong message type</td>
+<td>0x33</td>
+</tr>
+<tr>
+<td>Wrong message value</td>
+<td>0x34</td>
+</tr>
+<tr>
+<td>Wrong End of message</td>
+<td>0x35</td>
+</tr>
+</tbody>
+</table>
+<p>[YB]: This is the end of the message. This tells the the controller to stop reading the message, all messages needs this to be read. NEEDS TO BE IN HEX (0x59)(0x42)</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Message Type</th>
+<th>Message ID  (uint8_t)</th>
+<th>Carter Role: Sensor; ID: C</th>
+<th>Zack Role: Motor; ID: Z</th>
+<th>Brenden Role Web; ID: B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pitch Value</td>
+<td>0x31</td>
+<td>S (reads sound)</td>
+<td>R (Motor reacts)</td>
+<td>R (mqtt topic:/ EGR314/TEAM2/PITCH)</td>
+</tr>
+<tr>
+<td>Motor on or off</td>
+<td>0x33</td>
+<td>-</td>
+<td>S (motor spins)</td>
+<td>R (mqtt topic: /EGR314/TEAM203/MOTORON</td>
+</tr>
+<tr>
+<td>System off</td>
+<td>0x34</td>
+<td>R (turn off sensor)</td>
+<td>R (Turn motor off )</td>
+<td>S mqtt topic: /EGR314/TEAM203/OFF</td>
+</tr>
+<tr>
+<td>Sensor Error</td>
+<td>0x35</td>
+<td>S (message error)</td>
+<td>R (remove motor SPI )</td>
+<td>R mqtt topic: /EGR314/TEAM203/SENSORERROR</td>
+</tr>
+<tr>
+<td>Motor Error</td>
+<td>0x36</td>
+<td>R (disconnect sensor)</td>
+<td>S (message error )</td>
+<td>R mqtt topic: /EGR314/TEAM203/MOTORERROR</td>
+</tr>
+<tr>
+<td>Mqtt Error</td>
+<td>0x37</td>
+<td>-</td>
+<td>-</td>
+<td>R mqtt topic: /EGR314/TEAM203/MQTTERROR</td>
+</tr>
+</tbody>
+</table>
+<p>Table</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S</td>
+<td>Sends the message</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Receives</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Do nothing, pass through</td>
+</tr>
+</tbody>
+</table>
 
 
 
