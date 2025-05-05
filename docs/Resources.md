@@ -6,6 +6,10 @@
 [MOTOR.zip](https://github.com/user-attachments/files/20047809/MOTOR.zip.1.zip)
 [ZacksCode.pdf](https://github.com/user-attachments/files/20042872/full.code.pdf)
 
+[code_esp32_mqtt-main (2) (1).zip](https://github.com/user-attachments/files/20050920/code_esp32_mqtt-main.2.1.zip)
+
+
+
 # Project Video Demos
 
 <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; text-align: center;">
