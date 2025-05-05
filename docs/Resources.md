@@ -6,7 +6,7 @@
 [MOTOR.zip](https://github.com/user-attachments/files/20047809/MOTOR.zip.1.zip)
 [ZacksCode.pdf](https://github.com/user-attachments/files/20042872/full.code.pdf)
 
-[code_esp32_mqtt-main (2) (1).zip](https://github.com/user-attachments/files/20050920/code_esp32_mqtt-main.2.1.zip)
+[MQTT.zip](https://github.com/user-attachments/files/20050920/code_esp32_mqtt-main.2.1.zip)
 
 
 
