@@ -33,7 +33,7 @@ nav:
       - Block Diagram: "Block Diagram, Process Diagram, and Message Structure/Block_Diagram.md"
       - Communication Process: "Block Diagram, Process Diagram, and Message Structure/Communication_Process.md"
       - Message Types: "Block Diagram, Process Diagram, and Message Structure/Message_Types.md"
-   - API: API.md     
+  - API: API.md        # <--- fixed, no extra space
   - Innovation Showcase Poster: "Innovation Showcase Poster.md"
   - Reflection: Reflection.md
   - Resources: Resources.md
