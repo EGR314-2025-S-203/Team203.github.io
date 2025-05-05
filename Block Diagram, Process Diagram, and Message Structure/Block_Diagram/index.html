@@ -675,6 +675,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#decision-making-process" class="md-nav__link">
+    Decision Making Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meeting-requirements" class="md-nav__link">
+    Meeting Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-depth" class="md-nav__link">
+    In-Depth
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -805,6 +826,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#decision-making-process" class="md-nav__link">
+    Decision Making Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meeting-requirements" class="md-nav__link">
+    Meeting Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-depth" class="md-nav__link">
+    In-Depth
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -832,6 +874,28 @@
 
 <h2 id="team-block-diagram">Team Block Diagram</h2>
 <p><a class="glightbox" href="../teamblock.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Block Diagram Schematic" src="../teamblock.jpg" /></a></p>
+<h2 id="decision-making-process">Decision Making Process</h2>
+<p>Our final system is divided into three chunks — MQQT on the left, microphone input the middle, and motor on the right. The ESP32 listens to the audio input, passes the signal to the motor board, and the motor driver responds, while then sending the updated information to the MQQT server board.</p>
+<p>Grouping by subsystem was kept clean and simple. Every major block is framed and labeled. You know what you're looking at right away. The color-coding supports visibility. Red lines for transmitting data, green for receiving. </p>
+<h2 id="meeting-requirements">Meeting Requirements</h2>
+<ul>
+<li>
+<p>Brendan’s ESP32 handles the internet/MQTT.</p>
+</li>
+<li>
+<p>Carter’s board captures and digitizes sound from a microphone for the input sensing.</p>
+</li>
+<li>
+<p>Zack’s microcontroller drives a stepper motor, his is the actuator.</p>
+</li>
+<li>
+<p>And each board has its own barrel jack, 3.3V switching regulator, and jumpers to handle power.</p>
+</li>
+</ul>
+<h2 id="in-depth">In-Depth</h2>
+<p>Sensor Subsystem (Carter): I2C-based ADC (the PCM1861) reads data from the analog microphone, doing real-time audio with custom filtering.</p>
+<p>Actuator Subsystem (Zack): Stepper motor. SPI communication with a TMC2130 driver.It's controllable in both directions, as the requirement calls for. </p>
+<p>Internet Communication (Brendan): The ESP32 connects to the MQTT server over WiFi and handles data publishing/subscribing. Sends duplex—sensor data out, control messages back in.</p>
 
 
 
