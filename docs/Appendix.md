@@ -19,3 +19,7 @@
 2. Focused discussions on metrics of success beyond academic grading.
 
 3. Established a charter and mission statement that reflect our collective vision and the project’s purpose.
+
+## Zacks Code
+
+[ZacksCode.pdf](https://github.com/user-attachments/files/20047734/full.code.pdf)
