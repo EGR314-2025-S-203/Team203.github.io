@@ -36,7 +36,6 @@ A sample of potential audience members will be interviewed to discern their unde
 Functionality will be divided across the four teammates as follows:
  - Zach: Actuator Controlled Outputs
  - Carter: Sensor Controlled Inputs and Processing
- - Sivanee: Human Machine Interface via buttons and visual output screen
  - Brendan: Internet based two-way communication protocol. 
 
 
