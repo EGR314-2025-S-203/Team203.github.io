@@ -27,7 +27,10 @@ theme:
 nav:
   - Home: index.md
   - Ideation and Concept: Ideation_and_Concept.md
-  - Block Diagram, Process Diagram, and Message Structure: "Block Diagram, Process Diagram, and Message Structure/BlockDiagrams.md"
+  - Block Diagram, Process Diagram, and Message Structure:
+      - Block Diagram: "Block Diagram, Process Diagram, and Message Structure/Block_Diagram.md"
+      - Communication Process: "Block Diagram, Process Diagram, and Message Structure/Communication_Process.md"
+      - Message Types: "Block Diagram, Process Diagram, and Message Structure/Message_Types.md"
   - Team Organization: "Team Organization.md"
   - Innovation Showcase Poster: "Innovation Showcase Poster.md"
   - API: API.md
