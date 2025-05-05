@@ -26,15 +26,15 @@ theme:
 
 nav:
   - Home: index.md
+  - Appendix: Appendix.md  
+  - Team Organization: "Team Organization.md"  
   - Ideation and Concept: Ideation_and_Concept.md
   - Block Diagram, Process Diagram, and Message Structure:
       - Block Diagram: "Block Diagram, Process Diagram, and Message Structure/Block_Diagram.md"
       - Communication Process: "Block Diagram, Process Diagram, and Message Structure/Communication_Process.md"
       - Message Types: "Block Diagram, Process Diagram, and Message Structure/Message_Types.md"
-  - Team Organization: "Team Organization.md"
+   - API: API.md     
   - Innovation Showcase Poster: "Innovation Showcase Poster.md"
-  - API: API.md
-  - Appendix: Appendix.md
   - Reflection: Reflection.md
   - Resources: Resources.md
 
